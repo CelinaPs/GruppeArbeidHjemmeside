@@ -74,7 +74,7 @@ export default function Home() {
           <ul>
             {logs.map((log, index) => (
               <li key={index}>
-                <strong>{log.navn}</strong> - {new Date(log.dato).toLocaleDateString()}:<br />
+                <strong>{log.navn}</strong> - {new Date(log.dato).toLocaleDateString()}:<br/> {/*Gjør at loggene legges i date rekkefølge*/}
                 {log.beskrivelse}
               </li>
             ))}
