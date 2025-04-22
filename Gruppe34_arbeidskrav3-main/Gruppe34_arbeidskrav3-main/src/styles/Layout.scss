@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  color: #121212;
+}
+
+#root {
+  width: 100%;
+}
+
+//Header CSS
+.menu {
+  background-color: #ff3da8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  color: white;
+  flex-wrap: wrap;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  margin-bottom: 0;
+
+  .team {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .navList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: center;
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+//Main CSS
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+//CSS for profilene kortene
+#groupmembers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  article {
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+    padding: 2.5rem;
+    border: 2px solid #ff3da8;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 120px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 5px 0;
+      font-size: 1rem;
+      color: black;
+    }
+  }
+}
+
+//Styling for mobil
+@media (max-width: 900px) {
+  //Styling for Headeren (menyen)
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    .navList {
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+
+  //Main CSS
+  main {
+    margin-top: 150px;
+    article {
+      flex: 1 1 100%;
+      margin: 30px;
+    }
+  }
+}
+
+//CSS for Logg i Home.jsx
+#logg {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;}
+
+#logg h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+#logg ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#logg li {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 5px;
+}
